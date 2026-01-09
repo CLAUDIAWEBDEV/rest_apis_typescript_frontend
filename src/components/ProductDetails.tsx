@@ -48,7 +48,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                     <Form
                         className='w-full'
                         method='POST'
-                        action={`productos/${product.id}/eliminar`}
+                        action={`/productos/${product.id}/eliminar`}
                         onSubmit={(e) => {
                             if (!confirm('¿Eliminar?')) {
                                 e.preventDefault()

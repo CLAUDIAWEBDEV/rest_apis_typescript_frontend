@@ -3,7 +3,7 @@ import Layout from './layouts/Layout'
 import Products, { loader as productsLoader, action as updateAvailabilityAction } from './views/Products'
 import NewProduct, { action as newProductAction } from './views/NewProduct'
 import EditProduct, { loader as editProductLoader, action as editProductAction } from './views/EditProduct'
-import { action as deleteProductAction} from './components/ProductDetails'
+import { action as deleteProductAction } from './components/ProductDetails'
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
                 action: newProductAction
             },
             {
-                // ROA Pattern - Resource-oriented design
+                path: 'productos/:id/editar', // ROA Pattern - Resource-oriented design
                 element: <EditProduct />,
                 loader: editProductLoader,
                 action: editProductAction
